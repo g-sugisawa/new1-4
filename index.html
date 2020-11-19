@@ -3,23 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>課題①-4
-  </title>
+  <title>Document</title>
 </head>
 <body>
 <script>
-//課題①－4
   const task =  prompt("タスクを入力してください");
     if(task){
        task1 = prompt("ジャンルを入力してください");
         alert("新しいタスクを追加しました。");
     } 
-  const list = {
-        contents: "[内容]",
-        genres: "[ジャンル]",
-        tasklist:"==========================\n現在持っているタスクの一覧\n=========================="
-  }
-  tasks = [
+  const tasks = [
   {
     content: '机を片付ける',
     genre: '掃除'
@@ -33,16 +26,19 @@
     genre: '運動'
   },
   ];
-  console.log(list.tasklist);
-  tasks.forEach(element => 
+  function tasklist(){
+    console.log('==========================\n現在持っているタスクの一覧\n==========================');
+  }
+  tasklist();
+    tasks.forEach(element => 
   {
-    console.log((list.contents),(element.content),(list.genres),(element.genre));
+    console.log(`[内容]${element.content}、[ジャンル]${element.genre}`);
   });
-  tasks.push({content:task,genre:task1});  
-  console.log(list.tasklist);  
-  tasks.forEach(element => 
+  tasklist();
+    tasks.push({content:task,genre:task1});  
+    tasks.forEach(element => 
   {
-    console.log((list.contents),(element.content),(list.genres),(element.genre));
+    console.log(`[内容]${element.content}、[ジャンル]${element.genre}`);
   });
 </script>
 </body>
