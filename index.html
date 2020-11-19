@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  const task =  prompt("タスクを入力してください");
+    if(task){
+       task1 = prompt("ジャンルを入力してください");
+        alert("新しいタスクを追加しました。");
+    } 
+  const tasks = [
+  {
+    content: '机を片付ける',
+    genre: '掃除'
+  },
+  {
+    content: '牛乳を買う',
+    genre: '買い物'
+  },
+  {
+    content: '"散歩する',
+    genre: '運動'
+  },
+  ];
+  function tasklist(){
+    console.log('==========================\n現在持っているタスクの一覧\n==========================');
+  }
+  tasklist();
+    tasks.forEach(element => 
+  {
+    console.log(`[内容]${element.content}、[ジャンル]${element.genre}`);
+  });
+  tasklist();
+    tasks.push({content:task,genre:task1});  
+    tasks.forEach(element => 
+  {
+    console.log(`[内容]${element.content}、[ジャンル]${element.genre}`);
+  });
+</script>
+</body>
+</html>
